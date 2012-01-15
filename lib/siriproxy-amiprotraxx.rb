@@ -50,7 +50,7 @@ class SiriProxy::Plugin::Amiprotraxx < SiriProxy::Plugin
   #Stop channel
   listen_for /Stop channel (#{numberRegEx})/i do |channel|
 
-	channelNum = makeNumber(channel)
+	  channelNum = makeNumber(channel)
     say "Stopping channel #{channelNum} on ProTraXX", spoken: "Stopping channel #{channelPairNum} on pro tracks"
     
 		cmdString = "c#{channelNum}RJ\n"

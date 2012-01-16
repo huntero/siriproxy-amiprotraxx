@@ -28,7 +28,7 @@ class SiriProxy::Plugin::Amiprotraxx < SiriProxy::Plugin
     cmdString = "#{fileNum}c#{channelNum}PL\n"
     s = UDPSocket.new
     s.send(cmdString, 0, self.traxxIP, self.traxxPort)
-
+  
     request_completed
   end
 

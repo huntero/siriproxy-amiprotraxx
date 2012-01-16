@@ -1,0 +1,8 @@
+#Example configuration options that can be placed in your main SiriProxy config.yml
+
+#Note: modifying these values will have no effect!  You must put them in your SiriProxy config.yml.
+
+    - name: 'Amiprotraxx'
+      git: 'git://github.com/huntero/siriproxy-amiprotraxx.git'
+      traxxIP: '192.168.0.254'
+      traxxPort: 2638

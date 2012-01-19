@@ -39,7 +39,7 @@ class SiriProxy::Plugin::Amiprotraxx < SiriProxy::Plugin
     channelPairNum = makeNumber(channelpair)
     say "Playing file #{fileNum} on channel pair #{channelPairNum} on ProTraXX", spoken: "Playing file #{fileNum} on channel pair #{channelPairNum} on pro tracks"
     
-    cmdString = "#{fileNum}p#{channelNum}PL\n"
+    cmdString = "#{fileNum}p#{channelPairNum}PL\n"
     s = UDPSocket.new
     s.send(cmdString, 0, self.traxxIP, self.traxxPort)
     

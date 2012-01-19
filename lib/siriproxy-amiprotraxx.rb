@@ -50,7 +50,7 @@ class SiriProxy::Plugin::Amiprotraxx < SiriProxy::Plugin
   #Stop channel
   listen_for /Stop channel (#{numberRegEx})/i do |channel|
     channelNum = makeNumber(channel)
-    say "Stopping channel #{channelNum} on ProTraXX", spoken: "Stopping channel #{channelPairNum} on pro tracks"
+    say "Stopping channel #{channelNum} on ProTraXX", spoken: "Stopping channel #{channelNum} on pro tracks"
     
     cmdString = "c#{channelNum}RJ\n"
     s = UDPSocket.new
@@ -64,7 +64,7 @@ class SiriProxy::Plugin::Amiprotraxx < SiriProxy::Plugin
     channelPairNum = makeNumber(channelPair)
     say "Stopping channel pair #{channelPairNum} on ProTraXX", spoken: "Stopping channel pair #{channelPairNum} on pro tracks"
     
-    cmdString = "#{fileNum}p#{channelNum}RJ\n"
+    cmdString = "p#{channelPairNum}RJ\n"
     s = UDPSocket.new
     s.send(cmdString, 0, self.traxxIP, self.traxxPort)
   
